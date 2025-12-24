@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// 🔥 already added
+import siteConfig from "../../config/siteConfig";
+
 const About = () => {
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
+
+    // 🔥 CHANGED: title split
+    const [helloKids, restTitle] = siteConfig.branding.title.split("Hello Kids ");
 
     return (
         <div className="relative py-10 md:py-20 px-6 md:px-24 flex flex-col md:flex-row items-center gap-10 bg-transparent">
@@ -15,14 +21,19 @@ const About = () => {
                 <span className="bg-[#0077b6] text-white font-semibold text-sm px-4 py-1 inline-block mb-4 tracking-wide">
                     ABOUT CAMPUS
                 </span>
+
+                {/* 🔥 CHANGED PART ONLY */}
                 <h1 className="text-4xl text-black md:text-5xl font-bold leading-tight mb-4">
-                    Welcome To <span className="text-[#ffb703]">Vrindavan</span> Smart School
+                    Welcome To{" "}
+                    <span className="text-[#ffb703]">Hello Kids</span>{" "}
+                    {restTitle}
                 </h1>
+
                 <p className="text-lg text-gray-700 border-l-4 border-red-600 pl-4 mb-6">
                     Our mission is to prepare education leaders and innovators who will change the world by expanding opportunities and outcomes for learners everywhere.
                 </p>
 
-                <Link to='/About/about-vss'>
+                <Link to="/About/about-vss">
                     <button className="bg-gradient-to-br from-[#ffb703] to-[#ff9900] text-black font-semibold px-6 py-2 rounded-lg shadow-[4px_4px_0px_#d97706] hover:translate-x-1 hover:translate-y-1 transition-all duration-200">
                         View More
                     </button>
@@ -32,7 +43,7 @@ const About = () => {
             {/* Right Image */}
             <div className="flex-1 w-full md:block" data-aos="fade-left">
                 <img
-                    src={import.meta.env.VITE_SERVICE_URL + '/siteimages/entrance2.jpg'}
+                    src={import.meta.env.VITE_SERVICE_URL + "/siteimages/entrance2.jpg"}
                     alt="Campus"
                     className="w-full h-auto object-contain rounded-md"
                 />

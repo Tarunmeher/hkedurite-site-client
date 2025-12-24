@@ -1,5 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import logo from '../../assets/images/logoo.jpg'
+import siteConfig from "../../config/siteConfig";
 
 
 const Footer = () => {
@@ -9,8 +9,8 @@ const Footer = () => {
 
         {/* College Name & Logo */}
         <div>
-          <img src={logo} alt="College Logo" className="h-20 mb-3" />
-          <h2 className="text-2xl font-bold"> Vrindavan Smart School</h2>
+          <img src={`${siteConfig.branding.hkislogo}`} alt="College Logo" className="h-20 mb-3" />
+          <h2 className="text-2xl font-bold">{`${siteConfig.branding.title}`}</h2>
           <p className="text-gray-400 mt-2">Shaping the future with quality education.</p>
         </div>
 
@@ -30,9 +30,9 @@ const Footer = () => {
         {/* Contact & Social Links */}
         <div>
           <h3 className="text-xl font-semibold">Contact</h3>
-          <p className="text-gray-400 mt-2">Mangala mandir Gali, Near Satsang vihar, Bhawanipatna, Odisha 766002</p>
-          <p className="text-gray-400">Email: vrindavansmartschool@gmail.com</p>
-          <p className="text-gray-400">Phone: +91 95564 48444</p>
+          <p className="text-gray-400 mt-2">{siteConfig.contact.address}</p>
+          <p className="text-gray-400">{`Email: ${siteConfig.contact.email}`}</p>
+          <p className="text-gray-400">{`Phone: ${siteConfig.contact.phone}`}</p>
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-4">
@@ -75,7 +75,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="text-center text-gray-500 text-sm mt-6 border-t border-gray-700 pt-4">
-        © {new Date().getFullYear()} Vrindavan Smart School. All rights reserved.
+        © {new Date().getFullYear()} {`${siteConfig.branding.title}`}. All rights reserved.
       </div>
     </footer>
   );

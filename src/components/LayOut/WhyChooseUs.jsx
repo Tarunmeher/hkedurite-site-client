@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import siteConfig from '../../config/siteConfig';
 
 const data = [
     {
@@ -42,7 +43,7 @@ const WhyChooseUs = () => {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-full w-full bg-blue-600"></span>
                     </span>
-                    Why <span className="text-blue-600 inline-block" data-aos="fade-up">Vrindavan</span>
+                    Why <span className="text-blue-600 inline-block" data-aos="fade-up">{`${siteConfig.branding.title2}`}</span>
                 </h2>
             </div>
 

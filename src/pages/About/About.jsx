@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Facilities from './Facilities'
+import siteConfig from "../../config/siteConfig";
 
 
 const About = () => {
@@ -16,10 +17,10 @@ const About = () => {
                 {/* Left Content */}
                 <div className="text-white z-10" data-aos="fade-right">
                     <span className="bg-[#0077b6] text-white font-semibold text-sm px-4 py-1 inline-block mb-4 tracking-wide">
-                        ABOUT VRINDAVAN
+                        ABOUT {`${siteConfig.branding.title2}`}
                     </span>
                     <h1 className="text-4xl text-black md:text-3xl font-bold leading-tight mb-4">
-                        Welcome To <span className="text-[#ffb703]">Vrindavan</span> Smart School
+                        Welcome To <span className="text-[#ffb703]">{`${siteConfig.branding.title}`}</span> 
                     </h1>
                     <p className="text-lg text-gray-700 border-l-4 border-red-600 pl-4 mb-6">
                         Our mission is to prepare education leaders and innovators who will change the world by expanding opportunities and outcomes for learners everywhere.

@@ -1,4 +1,5 @@
 import React from "react";
+import siteConfig from "../../config/siteConfig";
 
 const Contact = () => {
     return (
@@ -19,13 +20,14 @@ const Contact = () => {
                                 Vrindavan Smart School (VSS)<br />
                                 Bhawanipatna <br />
                                 <a
-                                    href="https://maps.google.com?q=Patia,Bhubaneswar,Odisha,India"
+                                    href="https://www.google.com/maps/place/HELLO+KIDS+EDURITE+INTERNATIONAL+SCHOOL/@19.8659386,82.7722951,15z"
                                     className="text-blue-500 hover:underline"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Mangala mandir Gali, Near Satsang vihar, Sambhunagar Pada, Bhawanipatna, Odisha, India
+                                    View Location on Map
                                 </a>
+
                                 <br />
                                 Pin: 766002
                             </p>
@@ -37,20 +39,20 @@ const Contact = () => {
                                     href="mailto:vrindavansmartschool@gmail.com"
                                     className="text-blue-500 hover:underline"
                                 >
-                                    vrindavansmartschool@gmail.com
+                                    {`${siteConfig.contact.email}`}
                                 </a>
                             </p>
                         </div>
                         <div className="flex items-center">
                             <span className="text-blue-500 text-lg mr-2">📞</span>
-                            <p>+91 95564 48444</p>
+                            <p>{`${siteConfig.contact.phone}`}</p>
                         </div>
                         <div className="flex items-center">
                             <span className="text-blue-500 text-lg mr-2">📞</span>
                             <p>
                                 Admission Contact:
                                 <a href="tel:9556448444" className="text-blue-500 hover:underline">
-                                    +91 95564 48444
+                                  {`${siteConfig.contact.phone}`}
                                 </a>
                             </p>
                         </div>
@@ -71,11 +73,12 @@ const Contact = () => {
                 <div className="w-full md:w-1/2">
                     <iframe
                         className="w-full h-80"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.423137399964!2d83.13726557339545!3d19.90656612537754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a24e910e35fca97%3A0xf26d5b1d596f3e72!2sVRINDAVAN%20SMART%20SCHOOL!5e0!3m2!1sen!2sin!4v1745286252200!5m2!1sen!2sin"
-                        allowFullScreen=""
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13582.853663562024!2d82.7722951!3d19.8659386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a251916242ed8a3%3A0x991ce954be8cac71!2sHELLO%20KIDS%20EDURITE%20INTERNATIONAL%20SCHOOL!5e1!3m2!1sen!2sin!4v1766574937921!5m2!1sen!2sin"
+                        allowFullScreen
                         loading="lazy"
-                        title="Lambodar College Map"
+                        title="Hello Kids Edurite International School Map"
                     ></iframe>
+
                 </div>
             </div>
         </div>

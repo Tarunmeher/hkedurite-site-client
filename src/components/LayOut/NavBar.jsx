@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import SummerCourseBanner from "../Banner/SummerCourseBanner";
 import '../../assets/css/mobile.css';
-import logo from '../../assets/images/logoo.jpg'
+import logo from '../../config/siteConfig.js';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,12 +53,12 @@ const Navbar = () => {
       <nav className="absolute top-0 left-0 w-full z-50 text-white p-1 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img
-            src={logo}
+            src={`${logo.branding.hkislogo}`}
             style={{
               filter: "drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 5px white)"
             }}
             alt="College Logo"
-            className="h-20"
+            className="h-16"
           />
         </Link>
 
