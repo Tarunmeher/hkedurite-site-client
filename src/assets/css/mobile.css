@@ -1,0 +1,62 @@
+@media (max-width: 480px) {
+    /*Home Navbar (NavBar.jsx)*/
+    #mobileMenulist {
+        margin-right: 20px;
+        height: 40px;
+        font-size: 30px;
+        margin-top: -20px;
+    }
+    #mobileMenulist svg{
+        height: 60px;
+        width:30px;
+    }
+    #menulist{
+        margin-top: 30px;
+    }
+    .gallerycont{
+        margin-left: 15px;
+    }
+
+    /*Home Banner(Hero.jsx)*/
+    #homebannermobile{
+        height:400px;
+    }
+    #homebannermobile h1{
+        font-size: 1.5rem;
+    }
+    .homebannerdesc{
+        font-size: 1rem;
+    }
+
+    /*Home News & Notification*/
+    .homenewnotificationbox{
+        height:500px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+
+    /*Home WhyChooseUs page*/
+    .whycard{
+        width:300px;
+        margin-left: -10px;
+    }
+    .whycardparent{
+        padding:2px;
+    }
+
+    /*Home Aboutus page*/
+    .aboutusmobile h4{
+        font-size: 1.5rem;
+        display: inline-block;
+    }
+    .aboutusmobiledesc{
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-top: -30px;
+    }
+
+    .profilepagemobile{
+        padding:5px;
+    }
+}
