@@ -17,8 +17,8 @@ const Contact = () => {
                         <div className="flex items-start">
                             <span className="text-blue-500 text-lg mr-2">📍</span>
                             <p>
-                                Vrindavan Smart School (VSS)<br />
-                                Bhawanipatna <br />
+                                Hello Kids Edurite International School<br />
+                                Dharmagarh <br />
                                 <a
                                     href="https://www.google.com/maps/place/HELLO+KIDS+EDURITE+INTERNATIONAL+SCHOOL/@19.8659386,82.7722951,15z"
                                     className="text-blue-500 hover:underline"
@@ -29,14 +29,14 @@ const Contact = () => {
                                 </a>
 
                                 <br />
-                                Pin: 766002
+                                Pin: 766015
                             </p>
                         </div>
                         <div className="flex items-center">
                             <span className="text-blue-500 text-lg mr-2">📧</span>
                             <p>
                                 <a
-                                    href="mailto:vrindavansmartschool@gmail.com"
+                                    href="mailto:hellokids.edurite@gmail.com"
                                     className="text-blue-500 hover:underline"
                                 >
                                     {`${siteConfig.contact.email}`}
@@ -59,12 +59,12 @@ const Contact = () => {
                         <div className="flex items-center">
                             <span className="text-blue-500 text-lg mr-2">🌐</span>
                             <a
-                                href="https://vrindavansmartschool.in"
+                                href="https://hkedurite.in"
                                 className="text-blue-500 hover:underline"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                www.vrindavansmartschool.in
+                                www.hkedurite.in
                             </a>
                         </div>
                     </div>
