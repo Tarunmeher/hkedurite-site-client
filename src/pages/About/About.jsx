@@ -26,8 +26,8 @@ const About = () => {
                         Our mission is to prepare education leaders and innovators who will change the world by expanding opportunities and outcomes for learners everywhere.
                     </p>
                     <p className="text-black">
-                        The School was founded on 1<sup>st</sup> of April 2019, by the <strong className="text-[#000000]">SRI ANTARYAMI PANIGRAHI MEMORIAL FOUNDATION </strong>
-                        and named as <strong className="text-[#ffb703]">VRINDAVAN SMART SCHOOL</strong> Bhawanipatna, Kalahandi.
+                        The School was founded on 1<sup>st</sup> of April 2019, by the <strong className="text-[#000000]">{`${siteConfig.owner.name}`}</strong>
+                        and named as <strong className="text-[#ffb703]">{`${siteConfig.branding.title}`}</strong> Dharmagarh, Kalahandi.
                     </p>
 
                     <br />
@@ -37,7 +37,7 @@ const About = () => {
                         SCHOOL QUALITY POLICY
                     </span>
                     <p className="text-black">
-                        ✔️ We at The Vrindavan Smart School are committed to.
+                        ✔️ We at The {`${siteConfig.branding.title}`} are committed to.
                         <ol type="1">
                             <li className="px-5 py-2">✅ Impact holistic education for higher academic and social standard.</li>
                             <li className="px-5 py-2">✅ Provide conducive learning environment and opportunities for all round development.</li>
@@ -50,13 +50,13 @@ const About = () => {
                     </p>        
                     <br />            
                     <p className="text-black">
-                        ✔️ To make the VRINDAVAN SMART SCHOOL, a leading, learning community of motivated staff and students engaged in realizing and exploring the
+                        ✔️ To make the {`${siteConfig.branding.title}`}, a leading, learning community of motivated staff and students engaged in realizing and exploring the
                          limits of their full and human potential to graciously contribute to the socity.   
                     </p>
                     <br />
                     <p className="text-black">
                         ✔️ To provide and educational environment in which students feel safe, secured, empowered, energized and unlimited in pursing learning experiences to 
-                        their maximum potential. The VRINDAVAN SMART SCHOOL provides holistic education that emphasizes high aademic and social standards, promotes healthy life style,
+                        their maximum potential. The {`${siteConfig.branding.title}`} provides holistic education that emphasizes high aademic and social standards, promotes healthy life style,
                         cultivates critics thinking, fosters scientific temper, instills desires for lifelong learning.   
                     </p>
                 </div>

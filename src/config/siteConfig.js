@@ -4,7 +4,7 @@ const siteConfig = {
     branding: {
         hkislogo,
         title: "Hello Kids Edurite",
-        title2:"HK Edurate",
+        title2: "HK Edurate",
         tagline: "Learn • Grow • Succeed",
     },
 
@@ -12,6 +12,9 @@ const siteConfig = {
         email: "hellokids.edurite@gmail.com",
         phone: "+91 80188 51512",
         address: "Dharmagarh, Odisha, India",
+    },
+    owner: {
+        name: "Dr. Akash Agrawal",
     },
 
     footer: {

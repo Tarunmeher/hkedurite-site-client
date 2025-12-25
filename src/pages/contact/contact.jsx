@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div className="flex flex-col items-center p-6 bg-gray-50 min-h-screen">
             <h1 className="text-3xl font-bold text-gray-800 text-center">
-                Vrindavan Smart School
+            {`${siteConfig.branding.title}`}
             </h1>
             <div className="w-20 h-1 bg-blue-500 mt-2 mb-6"></div>
 
