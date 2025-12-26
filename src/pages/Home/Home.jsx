@@ -11,7 +11,7 @@ import AboutUs from '../../components/LayOut/AboutUs'
 import EventGallery from '../../components/LayOut/EventGallery'
 import EventCarousel from '../../components/LayOut/EventCarousel'
 import StudentAndStafDetails from '../../components/LayOut/Student&StafDetails'
-import EnrollNow from '../../components/LayOut/EnrollNow'
+import EnquiryNow from '../../components/LayOut/EnquiryNow'
 
 const Home = () => {
     const [isBannerVisible, setIsBannerVisible] = useState(false);
@@ -23,18 +23,11 @@ const Home = () => {
     return (
         <>
             <Hero />
-            <EnrollNow />
-            {/* <WeHave /> */}
-            {/* <FounderLegacy /> */}
             <AboutUs />
+            <EnquiryNow/>
             <EventGallery />
-            {/* <CourseSlider /> */}
             <NewsAndInformation />
-            {/* <StudentAndStafDetails /> */}
             <WhyChooseUs />
-            {/* <EventCarousel /> */}
-            {/* <Visit /> */}
-            {/* Summer Course Banner Popup */}
             <SummerCourseBanner
                 isVisible={isBannerVisible}
                 onClose={() => setIsBannerVisible(false)}

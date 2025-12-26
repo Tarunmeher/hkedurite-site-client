@@ -179,7 +179,7 @@ const Navbar = () => {
             </button>
           </Link> */}
           <Link to="/admin/login">
-            <button className="bg-white text-[#014b8f] px-3 py-1 rounded-sm text-sm font-medium mr-2 hover:bg-gray-200">
+            <button className="bg-gradient-to-br from-[#ff9900] to-[#ffb703] text-black font-semibold px-6 py-2 rounded-lg shadow-[4px_4px_0px_#d97706] hover:translate-x-1 hover:translate-y-1 transition-all duration-200">
               Login
             </button>
           </Link>

@@ -1,143 +1,127 @@
-import React, { useState, useEffect } from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaTwitter,
-  FaYoutube,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { HiArrowRight } from "react-icons/hi";
-import { Typewriter } from "react-simple-typewriter";
-
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import siteConfig from "../../config/siteConfig";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
-    title: siteConfig.branding.title,
-    description:
-      "Innovative e-learning solutions for the next generation of students.",
+    title: "Where Education Meets Imagination",
+    highlight: "Empowering Young Minds",
+    desc: "Innovative e-learning solutions for the next generation of students.",
     image: import.meta.env.VITE_SERVICE_URL + "/siteimages/collegebnr.jpg",
   },
   {
-    title: siteConfig.branding.title,
-    description: "Shaping the future with quality education.",
+    title: "Building Strong Foundations",
+    highlight: "Quality Education for Life",
+    desc: "Shaping the future with strong values, creativity, and confidence.",
     image: import.meta.env.VITE_SERVICE_URL + "/siteimages/class4.jpg",
   },
   {
-    title: siteConfig.branding.title,
-    description: "Shaping the future with quality education.",
+    title: "A Safe Place to Learn",
+    highlight: "A Bright Future Begins Here",
+    desc: "Providing a nurturing environment where children learn and grow.",
     image: import.meta.env.VITE_SERVICE_URL + "/siteimages/entrance.jpg",
   },
   {
-    title: siteConfig.branding.title,
-    description: "Shaping the future with quality education.",
+    title: "Learning Today",
+    highlight: "Leading Tomorrow",
+    desc: "Inspiring students to become confident, curious, and capable learners.",
     image: import.meta.env.VITE_SERVICE_URL + "/siteimages/class6.jpg",
   },
 ];
 
-const socialLinks = [
-  { name: "LinkedIn", icon: <FaLinkedin size={30} />, url: "https://linkedin.com", bgColor: "bg-blue-600" },
-  { name: "Facebook", icon: <FaFacebook size={30} />, url: "https://facebook.com", bgColor: "bg-blue-700" },
-  { name: "Twitter", icon: <FaTwitter size={30} />, url: "https://twitter.com", bgColor: "bg-blue-400" },
-  { name: "YouTube", icon: <FaYoutube size={30} />, url: "https://youtube.com", bgColor: "bg-red-600" },
-  { name: "Instagram", icon: <FaInstagram size={30} />, url: "https://instagram.com", bgColor: "bg-pink-600" },
-  { name: "WhatsApp", icon: <FaWhatsapp size={30} />, url: "https://wa.me/yourphonenumber", bgColor: "bg-green-500" },
-];
 
-const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+export default function HeroSlider() {
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    setTimeout(function () {
-      nextSlide();
-    }, 2000);
+    AOS.init({
+      duration: 900,
+      once: true,
+      easing: "ease-out-cubic",
+    });
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === slides.length - 1 ? 0 : prev + 1
-    );
-    setTimeout(function () {
-      nextSlide();
-    }, 2000);
-  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
+    return () => clearInterval(timer);
+  }, []);
+
+  const prevSlide = () =>
+    setIndex(index === 0 ? slides.length - 1 : index - 1);
+
+  const nextSlide = () =>
+    setIndex((index + 1) % slides.length);
 
   return (
-    <div
-      id="homebannermobile"
-      className="relative w-full h-[300px] lg:h-screen md:h-[400px] overflow-hidden"
-    >
-      {slides.map((slide, index) => (
+    <section className="relative w-full overflow-hidden min-h-[70vh] md:min-h-[85vh] lg:min-h-screen">
+      {/* Background Image */}
+      <img
+        src={slides[index].image}
+        alt="hero"
+        className="absolute inset-0 w-full h-full object-cover"
+        draggable="false"
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-full flex items-center">
         <div
-          key={index}
-          className={`absolute inset-0 transition-transform duration-700 ease-in-out ${
-            index === currentSlide
-              ? "translate-x-0"
-              : "translate-x-full"
-          }`}
+          data-aos="fade-up"
+          className="text-white max-w-2xl pt-24 md:pt-32"
         >
-          {slide.video ? (
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
+          <p className="text-orange-400 tracking-widest text-sm mb-3">
+            HK EDURATE INTERNATIONAL SCHOOL
+          </p>
+
+          <h1 className="font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            {slides[index].title} <br />
+            <span >
+              {slides[index].highlight}
+            </span>
+          </h1>
+
+          <p className="text-gray-300 mt-4 text-sm sm:text-base">
+            {slides[index].desc}
+          </p>
+
+          {/* Buttons */}
+          <div className="flex gap-3 mt-6">
+            <button
+              className={`px-5 py-3 ${siteConfig.background.bgcolor} rounded-full font-semibold`}
             >
-              <source src={slide.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img
-              src={slide.image}
-              alt={slide.title.toUpperCase()}
-              className="w-full h-full object-cover"
-            />
-          )}
-
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center px-4">
-            <h1 className="text-4xl font-bold">
-              <Typewriter
-                words={[slide.title.toUpperCase()]}
-                loop={false}
-                typeSpeed={100}
-                deleteSpeed={40}
-                cursor
-              />
-            </h1>
-
-            <p className="mt-4 text-xl homebannerdesc">
-              {slide.description}
-            </p>
-
-            {slide.link && (
-              <a
-                href={slide.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center px-6 py-3 my-2 cursor-pointer text-white border-2 group hover:bg-gray-900"
-              >
-                View More...
-                <span className="duration-300 group-hover:rotate-90">
-                  <HiArrowRight className="ml-3" />
-                </span>
-              </a>
-            )}
+              GET STARTED ↗
+            </button>
+            <Link to="/About/about-vss">
+              <button className="px-5 py-3 border border-white rounded-full font-semibold">
+                ABOUT US ↗
+              </button>
+            </Link>
           </div>
         </div>
-      ))}
-    </div>
-  );
-};
+      </div>
 
-export default Hero;
+      {/* Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/70 p-2 md:p-3 rounded-full"
+      >
+        <ChevronLeft className="text-white w-5 h-5 md:w-6 md:h-6" />
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-black/70 p-2 md:p-3 rounded-full"
+      >
+        <ChevronRight className="text-white w-5 h-5 md:w-6 md:h-6" />
+      </button>
+    </section>
+  );
+}
