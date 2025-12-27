@@ -20,7 +20,7 @@ const siteConfig = {
     footer: {
         copyright: "© 2025 Hello Kids Edurite International School",
     },
-    color: {
+    text: {
         primary: 'text-orange-500',
         secondary: 'text-blue-900',
     },

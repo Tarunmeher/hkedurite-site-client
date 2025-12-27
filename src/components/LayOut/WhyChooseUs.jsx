@@ -3,6 +3,7 @@ import { ArrowUpRight, CheckCircle } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import siteConfig from "../../config/siteConfig";
+import { Link } from "react-router-dom";
 
 const features = [
     { title: "Flexibility", description: "Interdum odio litora porttitor vestibulum si volutpat sociosqu. Ultrices consequat sed parturient mi vestibulum." },
@@ -27,22 +28,25 @@ const WhyChooseUs = () => {
                     </p>
 
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0b1c2d] leading-tight mb-4">
-                        Why <span className={`${siteConfig.color.primary}`} > choose </span>Our <br />
-                        Hello kids Edurite 
+                        Why <span className={`${siteConfig.text.primary}`} > choose </span>Our <br />
+                        Hello kids Edurite
 
                     </h2>
                 </div>
 
                 <div className="flex lg:justify-end items-start">
-                    <button className="group flex items-center gap-2 text-[#35536b] font-medium
+                    <Link to='/About/about-vss'>
+                        <button className="group flex items-center gap-2 text-[#35536b] font-medium
               border-b border-[#35536b] pb-1 hover:text-[#242cc9]
               hover:border-green-600 transition cursor-pointer">
-                        Know More...
-                        <ArrowUpRight
-                            size={18}
-                            className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                        />
-                    </button>
+                            Know More...
+                            <ArrowUpRight
+                                size={18}
+                                className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                            />
+                        </button>
+                    </Link>
+
                 </div>
             </div>
 
@@ -55,7 +59,7 @@ const WhyChooseUs = () => {
                         data-aos-delay={index * 100}
                     >
                         <div className="flex items-center gap-3 mb-3">
-                            <CheckCircle className={`${siteConfig.color.primary}`}/>
+                            <CheckCircle className={`${siteConfig.text.primary}`} />
                             <h3 className="text-xl font-semibold">{feature.title}</h3>
                         </div>
                         <p className="text-gray-300 text-sm">{feature.description}</p>

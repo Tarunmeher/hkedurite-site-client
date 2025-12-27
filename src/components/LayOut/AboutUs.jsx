@@ -40,7 +40,7 @@ const About = () => {
                             data-aos="fade-up"
                             className="bg-[#fff1e6] rounded-2xl p-5 sm:p-6 shadow-lg w-full sm:w-64"
                         >
-                            <span className={`text-sm font-semibold ${siteConfig.color.secondary}`}>
+                            <span className={`text-sm font-semibold ${siteConfig.text.secondary}`}>
                                 ABOUT CAMPUS
                             </span>
                             <h3 className="text-lg sm:text-xl font-semibold mt-2">
@@ -70,7 +70,7 @@ const About = () => {
 
                 {/* RIGHT CONTENT */}
                 <div data-aos="fade-left" className="text-center lg:text-left">
-                    <p className={` ${siteConfig.color.secondary} font-semibold mb-3 sm:mb-4`}>
+                    <p className={` ${siteConfig.text.secondary} font-semibold mb-3 sm:mb-4`}>
                         About Us
                     </p>
 

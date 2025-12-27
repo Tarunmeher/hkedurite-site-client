@@ -8,10 +8,10 @@ import SummerCourseBanner from "../../components/Banner/SummerCourseBanner";
 // import FounderLegacy from '../../components/LayOut/Founder'
 import CourseSlider from '../../components/LayOut/CourseSlider'
 import AboutUs from '../../components/LayOut/AboutUs'
-import EventGallery from '../../components/LayOut/EventGallery'
 import EventCarousel from '../../components/LayOut/EventCarousel'
 import StudentAndStafDetails from '../../components/LayOut/Student&StafDetails'
 import EnquiryNow from '../../components/LayOut/EnquiryNow'
+import Gallery from '../../components/LayOut/Gallery'
 
 const Home = () => {
     const [isBannerVisible, setIsBannerVisible] = useState(false);
@@ -24,8 +24,8 @@ const Home = () => {
         <>
             <Hero />
             <AboutUs />
-            <EnquiryNow/>
-            <EventGallery />
+            <EnquiryNow />
+            <Gallery />
             <NewsAndInformation />
             <WhyChooseUs />
             <SummerCourseBanner
