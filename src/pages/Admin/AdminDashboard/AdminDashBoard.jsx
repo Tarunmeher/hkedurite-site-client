@@ -1,30 +1,30 @@
 import { FaChalkboardTeacher, FaUserGraduate, FaUserTie, FaUserShield } from "react-icons/fa";
-// import SalaryStatus from "./SalaryStatus";
+import ManageHomePage from "./ManageHomePage";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const stats = [
     {
         title: "Professor",
-        value: "45",
+        value: "0",
         icon: <FaChalkboardTeacher className="text-white text-2xl" />,
         color: "bg-blue-600",
     },
     {
         title: "Students",
-        value: "1200",
+        value: "0",
         icon: <FaUserGraduate className="text-white text-2xl" />,
         color: "bg-sky-400",
     },
     {
         title: "Staff",
-        value: "98",
+        value: "0",
         icon: <FaUserTie className="text-white text-2xl" />,
         color: "bg-green-500",
     },
     {
         title: "Guest Faculty",
-        value: "1",
+        value: "0",
         icon: <FaUserShield className="text-white text-2xl" />,
         color: "bg-purple-500",
     },
@@ -59,9 +59,9 @@ const AdminDashBoard = () => {
                     </div>
                 ))}
             </div>
-            {/* <div className="mt-10">
-                <SalaryStatus />
-            </div> */}
+            <div className="mt-10">
+                <ManageHomePage />
+            </div>
 
         </>
     );

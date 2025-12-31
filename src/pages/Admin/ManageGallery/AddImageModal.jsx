@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import Loader from "../../../components/common/loader";
 const AddImageModal = ({ isOpen, onClose, onAdd }) => {
-  const [folderName, setFolderName] = useState("");
+  const [folderName, setFolderName] = useState("common");
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
 

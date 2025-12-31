@@ -132,6 +132,9 @@ export default function AdmissionForm() {
                 <option value="4th Class">4th Class</option>
                 <option value="5th Class">5th Class</option>
                 <option value="6th Class">6th Class</option>
+                <option value="6th Class">7th Class</option>
+                <option value="6th Class">8th Class</option>
+                <option value="6th Class">9th Class</option>
               </select>
             </div>
             <div>
@@ -144,7 +147,6 @@ export default function AdmissionForm() {
                 required
               >
                 <option value="">-- Select Package --</option>
-                <option value="Hostel">Hostel</option>
                 <option value="Day Boarding">Day Boarding</option>
                 <option value="Day Scholar">Day Scholar</option>
               </select>

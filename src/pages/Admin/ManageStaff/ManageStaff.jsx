@@ -193,10 +193,9 @@ const ManageStaff = () => {
               onChange={(e) => setOrg(e.target.value)}
               className="border border-gray-300 rounded-md px-3 py-2 w-35 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="">All Branch</option>
-              <option value="LCS">LCS</option>
-              <option value="LPS">LPS</option>
-              <option value="Tilottama">Tilottama</option>
+              <option value="">Select Branch</option>
+              <option value="Pre School">Pre School</option>
+              <option value="Primary School">Primary School</option>
             </select>
             <select
               value={designation}

@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* College Name & Logo */}
         <div>
-          <img src={`${siteConfig.branding.hkislogo}`} alt="College Logo" className="h-20 mb-3" />
+          <img src={`${siteConfig.branding.hkislogo}`} alt="College Logo" className="h-20 mb-3" style={{filter: "drop-shadow(white 0px 0px 1px) drop-shadow(white 0px 0px 1px) drop-shadow(white 0px 0px 5px)"}} />
           <h2 className="text-2xl font-bold">{`${siteConfig.branding.title}`}</h2>
           <p className="text-gray-400 mt-2">Shaping the future with quality education.</p>
         </div>
@@ -37,7 +37,7 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex space-x-4 mt-4">
             <a
-              href="https://www.facebook.com/vrindavan.educationalinstitutions"
+              href="https://www.facebook.com/hellokidsedurite2/"
               className="text-gray-400 hover:text-white text-xl"
               target="_blank"
               rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const Footer = () => {
               <FaFacebook />
             </a>
             <a
-              href="https://x.com/vrindavanbhpt"
+              href="javascript:void(0);"
               className="text-gray-400 hover:text-white text-xl"
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +53,7 @@ const Footer = () => {
               <FaTwitter />
             </a>
             <a
-              href="https://www.instagram.com/vrindavansmartschool"
+              href="https://www.instagram.com/hello_kids_dharamgarh_"
               className="text-gray-400 hover:text-white text-xl"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://www.youtube.com/@vrindavansmartschool"
+              href="https://www.youtube.com/@hellokidseduritedharamgarh2120"
               className="text-gray-400 hover:text-white text-xl"
               target="_blank"
               rel="noopener noreferrer"
